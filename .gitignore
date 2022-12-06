@@ -5,3 +5,4 @@ Lib
 Scripts
 .vscode
 db.sqlite3
+venv
