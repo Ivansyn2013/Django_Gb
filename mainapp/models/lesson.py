@@ -3,6 +3,7 @@ __all__ = ['Lesson']
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 class Lesson(models.Model):
     course = models.ForeignKey('mainapp.Courses', on_delete=models.CASCADE)
     num = models.PositiveIntegerField(verbose_name="Lesson number")
@@ -29,7 +30,6 @@ class Lesson(models.Model):
         self.save()
 
     class Meta:
-
         ordering = ("course", "num")
         verbose_name = _("Lesson")
         verbose_name_plural = _("Lessons")
