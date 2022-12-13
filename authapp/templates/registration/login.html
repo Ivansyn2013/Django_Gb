@@ -29,7 +29,7 @@
         style="height: 100vh; margin: 0px">
         <div class="text-center">
             <p>
-                <a href="{% url 'mainapp:index' %}"><img
+                <a href="{% url 'mainapp:main_page' %}"><img
                         src="{% static 'img/logo.png' %}" alt=""></a>
             </p>
             <h2>Вход пользователя</h2>
@@ -67,9 +67,10 @@
             <h4>Вход через социальные сети</h4>
             <p>
             <div class="btn-group btn-block" role="group">
-                <a class="btn btn-primary" href="#" role="button"><i
+                <a class="btn btn-primary"
+                    href="{% url 'social:begin' 'vk-oauth2' %}" role="button"><i
                         class="fab fa-vk"></i></a>
-                 <a class="btn btn-primary" href="{% url 'social:begin' 'github' %}" role="button"><i
+                <a class="btn btn-primary" href="{% url 'social:begin' 'github' %}" role="button"><i
                         class="fab fa-github"></i></a>
                 <a class="btn btn-primary" href="#" role="button"><i
                         class="fab fa-facebook"></i></a>

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "social_django",
+    "crispy_forms",
     "markdownify.apps.MarkdownifyConfig",
     'django_extensions',
     'mainapp',
@@ -132,8 +132,8 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = "authapp.CustomUser"
 
-LOGIN_REDIRECT_URL = "mainapp:index"
-LOGOUT_REDIRECT_URL = "mainapp:index"
+LOGIN_REDIRECT_URL = "mainapp:main_page"
+LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
@@ -165,3 +165,4 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GITHUB_KEY = "c9ec0cf4778bc1535f4c"
 SOCIAL_AUTH_GITHUB_SECRET = "cae481533ab73098c4bb11fbe73a46c847dfaa32"
+CRISPY_TEMPLATE_PACK = "bootstrap4" # https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs

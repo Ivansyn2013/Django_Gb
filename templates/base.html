@@ -18,18 +18,19 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
 
-  <title>Welcome to Braniac!</title>
+  <title>
+    {% block title %}
+    Welcome to Braniac!
+    {% endblock title %}
+  </title>
 </head>
 
 <body>
 
   {% include 'includes/main_menu.html' %}
-
   {% block messages %}
     {% include 'includes/messages.html' %}
   {% endblock messages %}
-
-
   <div class="container-md">
 
     {% block content %}
@@ -55,7 +56,7 @@
         </p>
         <p>
         <ul class="list-unstyled">
-          <li><a href="{% url 'mainapp:index' %}">Домашняя</a></li>
+          <li><a href="{% url 'mainapp:main_page' %}">Домашняя</a></li>
           <li><a href="{% url 'mainapp:news' %}">Новости</a></li>
           <li><a href="{% url 'mainapp:login' %}">Войти</a></li>
         </ul>
@@ -125,6 +126,8 @@
 
   <!-- FontAwesome -->
   <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
+
+    <!-- Toasts -->
     <script>
         $(document).ready(function () {
 
@@ -135,7 +138,7 @@
             {% endif %}
         });
     </script>
-
+    {% block js %}{% endblock js %}
 
 </body>
 
