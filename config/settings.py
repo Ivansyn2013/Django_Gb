@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "social_django",
     "markdownify.apps.MarkdownifyConfig",
     'django_extensions',
     'mainapp',

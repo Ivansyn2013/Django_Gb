@@ -6,3 +6,4 @@ Scripts
 .vscode
 db.sqlite3
 venv
+/db.sqlite3.bac
