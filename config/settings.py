@@ -132,8 +132,8 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = "authapp.CustomUser"
 
-LOGIN_REDIRECT_URL = "mainapp:index"
-LOGOUT_REDIRECT_URL = "mainapp:index"
+LOGIN_REDIRECT_URL = "mainapp:main_page"
+LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
