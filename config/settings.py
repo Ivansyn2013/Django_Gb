@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
     "debug_toolbar",     # pip install django-debug-toolbar pip install django-redis
                          # sudo apt install redis-server
+
+    'django_celery_beat',
     "crispy_forms",
     "markdownify.apps.MarkdownifyConfig",
     'django_extensions',
@@ -217,3 +219,10 @@ CACHES = {
         },
     }
 }
+
+
+CELERY_BROKER_URL = "redis://localhost:6379" # pip install "celery[redis]"
+CELERY_RESULT_BACKEND = "redis://localhost:6379"
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = "var/email-messages/"
