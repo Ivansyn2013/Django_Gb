@@ -5,6 +5,8 @@ from django.conf import settings
 from mainapp import views
 from mainapp.apps import MainappConfig
 
+from django.views.decorators.cache import cache_page
+
 app_name = MainappConfig.name
 
 urlpatterns = [
@@ -26,7 +28,10 @@ urlpatterns = [
         views.NewsDeleteView.as_view(),
         name="news_delete",
     ),
-    path("courses/", views.CoursesListView.as_view(), name="courses"),
+    path(
+        "courses/",
+        cache_page(30)(views.CoursesListView.as_view()),  # 5
+        name="courses"),
     path(
         "courses/<int:pk>/",
         views.CoursesDetailView.as_view(),
