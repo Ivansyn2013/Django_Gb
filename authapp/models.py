@@ -18,8 +18,8 @@ def users_avatars_path(instance, filename):
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    USERNAME_FIELD = 'email'
-
+    #USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'username'
     username_validator = ASCIIUsernameValidator()
 
     username = models.CharField(
@@ -67,9 +67,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = UserManager()
 
-    # EMAIL_FIELD = "email"
-    # USERNAME_FIELD = "username"
-    # REQUIRED_FIELDS = ["email"]
 
     class Meta:
         verbose_name = _("user")

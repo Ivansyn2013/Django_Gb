@@ -1,3 +1,6 @@
+__all__ = ['ContactsPageView']
+
+
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy

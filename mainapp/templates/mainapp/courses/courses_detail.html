@@ -58,8 +58,7 @@
   </div>
 </div>
 <div class="accordion" id="accordionLessons">
-
-{% cache 300 lessons %}
+  {% cache 300 lessons %}
   {% for item in lessons %}
   <div class="card">
     <div class="card-header" id="headLessonPk{{ item.pk }}">
@@ -92,9 +91,7 @@
     </div>
   </div>
   {% endfor %}
-
 {% endcache %}
-
 </div>
 <h3>Отзывы</h3>
 

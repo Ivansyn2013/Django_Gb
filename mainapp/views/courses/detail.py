@@ -1,14 +1,14 @@
 __all__ = ['CoursesDetailView']
-from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView
-
-from mainapp.forms import CourseFeedbackForm
-from mainapp.models import Courses, Lesson, CourseTeachers, CourseFeedback
-from django.core.cache import cache
 
 import logging
 
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from django.views.generic import TemplateView
+from django.core.cache import cache
+
+from mainapp.forms import CourseFeedbackForm
+from mainapp.models import Courses, Lesson, CourseTeachers, CourseFeedback
 
 logger = logging.getLogger(__name__)
 
@@ -30,15 +30,14 @@ class CoursesDetailView(TemplateView):
         )
         if not self.request.user.is_anonymous:
             if not CourseFeedback.objects.filter(
-                course=context["course_object"], user=self.request.user
+                    course=context["course_object"], user=self.request.user
             ).exists():
                 context["feedback_form"] = CourseFeedbackForm(
                     course=context["course_object"], user=self.request.user
                 )
         cached_feedback = cache.get(f"feedback_list_{pk}")
         if not cached_feedback:
-            context["feedback_list"] = CourseFeedback.objects.filter(
-                course=context["course_object"]).order_by(
+            context["feedback_list"] = CourseFeedback.objects.filter(course=context["course_object"]).order_by(
                 "-created", "-rating").select_related('user')[:5]
             cache.set(f"feedback_list_{pk}", context["feedback_list"])
         else:

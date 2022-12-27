@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
@@ -16,22 +16,18 @@
       <ul class="navbar-nav mr-auto">
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:news' %}active{% endif %}">
-          <a class="nav-link" href="{% url 'mainapp:news' %}">
-            {% translate "News" %}
-          </a>
+          <a class="nav-link" href="{% url 'mainapp:news' %}">Новости</a>
         </li>
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:courses' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'mainapp:courses' %}">
-            {% translate "Courses" %}
-          </a>
+          <a class="nav-link" href="{% url 'mainapp:courses' %}">Курсы</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="ddProfile"
             role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
-            {% translate "Profile" %}
+            Профиль
           </a>
           <div class="dropdown-menu" aria-labelledby="ddProfile">
             <a class="dropdown-item"
@@ -52,34 +48,16 @@
         </li>
         {% else %}
         <li class="nav-item">
-                    <a class="nav-link" href="{% url 'authapp:login' %}">
-            {% translate "Enter" %}
-          </a>
+          <a class="nav-link" href="{% url 'authapp:login' %}">Вход</a>
         </li>
         {% endif %}
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:contacts' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'mainapp:contacts' %}">
-            {% translate "Contacts" %}
-          </a>
+          <a class="nav-link" href="{% url 'mainapp:contacts' %}">Контакты</a>
         </li>
       </ul>
-            <div class="row justify-content-end m-0">
-        <div class="col p-0 border-right">
-          <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="language" type="hidden" value="ru">
-            <button type="submit" class="btn btn-link">🇷🇺</button>
-          </form>
-        </div>
-        <div class="col p-0 border-left">
-          <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="language" type="hidden" value="en">
-            <button type="submit" class="btn btn-link">🇬🇧</button>
-          </form>
-        </div>
-      </div>
+      <span><a href="#">🇷🇺</a> <i class="fas fa-grip-lines-vertical"></i> <a
+          href="#">🇬🇧</a></span>
     </div>
   </div>
 </nav>
