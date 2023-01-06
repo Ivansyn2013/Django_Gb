@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+
+Lib
+.idea
+Scripts
+.vscode
+db.sqlite3
+venv
+/db.sqlite3.bac

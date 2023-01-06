@@ -1,0 +1,46 @@
+[2022-12-27 17:05:42,914] INFO django.utils.autoreload (637) Watching for file changes with StatReloader
+[2022-12-27 17:05:46,898] INFO django.server (161) "GET / HTTP/1.1" 302 0
+[2022-12-27 17:05:46,920] INFO django.server (161) "GET /mainapp/ HTTP/1.1" 200 20353
+[2022-12-27 17:05:47,184] INFO django.server (161) "GET /static/js/popper.min.js HTTP/1.1" 200 21233
+[2022-12-27 17:05:47,184] INFO django.server (161) "GET /static/css/bootstrap.min.css HTTP/1.1" 200 167943
+[2022-12-27 17:05:47,186] INFO django.server (161) "GET /static/css/Chart.min.css HTTP/1.1" 200 521
+[2022-12-27 17:05:47,186] INFO django.server (161) "GET /static/js/jquery-3.6.0.min.js HTTP/1.1" 200 89501
+[2022-12-27 17:05:47,186] INFO django.server (161) "GET /static/css/fontawesome.all.min.css HTTP/1.1" 200 59344
+[2022-12-27 17:05:47,187] INFO django.server (161) "GET /static/js/bootstrap.min.js HTTP/1.1" 200 63467
+[2022-12-27 17:05:47,188] INFO django.server (161) "GET /static/js/Chart.min.js HTTP/1.1" 200 173077
+[2022-12-27 17:05:47,191] INFO django.server (161) "GET /static/js/fontawesome.all.min.js HTTP/1.1" 200 1195450
+[2022-12-27 17:05:47,192] INFO django.server (161) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12378
+[2022-12-27 17:05:47,194] INFO django.server (161) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2022-12-27 17:05:47,245] INFO django.server (161) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+[2022-12-27 17:05:47,526] INFO django.server (161) "GET /static/img/user001.png HTTP/1.1" 200 24384
+[2022-12-27 17:05:47,529] INFO django.server (161) "GET /static/img/slider003.jpg HTTP/1.1" 200 2863995
+[2022-12-27 17:05:47,530] INFO django.server (161) "GET /static/img/promo001.jpg HTTP/1.1" 200 69037
+[2022-12-27 17:05:47,531] INFO django.server (161) "GET /static/img/promo002.jpg HTTP/1.1" 200 54342
+[2022-12-27 17:05:47,532] INFO django.server (161) "GET /static/img/promo003.jpg HTTP/1.1" 200 69825
+[2022-12-27 17:05:47,532] INFO django.server (161) "GET /static/img/logo.png HTTP/1.1" 200 4016
+[2022-12-27 17:05:47,533] INFO django.server (161) "GET /static/img/user002.png HTTP/1.1" 200 20918
+[2022-12-27 17:05:47,534] INFO django.server (161) "GET /static/img/user003.png HTTP/1.1" 200 23170
+[2022-12-27 17:05:47,534] INFO django.server (161) "GET /static/img/slider001.jpg HTTP/1.1" 200 183079
+[2022-12-27 17:05:47,538] INFO django.server (161) "GET /static/img/slider002.jpg HTTP/1.1" 200 3087732
+[2022-12-27 17:05:47,566] INFO django.server (161) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2022-12-27 17:05:47,589] INFO django.server (161) "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[2022-12-27 17:05:47,638] INFO django.server (161) "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76764
+[2022-12-27 17:05:48,027] WARNING django.request (224) Not Found: /favicon.ico
+[2022-12-27 17:05:48,028] WARNING django.server (161) "GET /favicon.ico HTTP/1.1" 404 12795
+[2022-12-27 17:05:49,941] INFO django.server (161) "GET /mainapp/news/ HTTP/1.1" 200 19542
+[2022-12-27 17:05:50,159] WARNING django.request (224) Not Found: /favicon.ico
+[2022-12-27 17:05:56,571] INFO django.server (161) "GET /authapp/login/ HTTP/1.1" 200 13623
+[2022-12-27 17:49:41,671] INFO django.utils.autoreload (637) Watching for file changes with StatReloader
+[2022-12-27 17:49:57,261] INFO django.utils.autoreload (637) Watching for file changes with StatReloader
+[2022-12-27 17:49:59,064] INFO django.server (161) "GET / HTTP/1.1" 302 0
+[2022-12-27 17:49:59,085] INFO django.server (161) "GET /mainapp/ HTTP/1.1" 200 20353
+[2022-12-27 17:49:59,186] INFO django.server (161) "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[2022-12-27 17:49:59,255] WARNING django.request (224) Not Found: /favicon.ico
+[2022-12-27 17:49:59,256] WARNING django.server (161) "GET /favicon.ico HTTP/1.1" 404 12795
+[2022-12-27 17:50:00,649] INFO django.server (161) "GET /authapp/login/ HTTP/1.1" 200 13623
+[2022-12-27 17:50:05,172] INFO django.server (161) "POST /authapp/login/ HTTP/1.1" 302 0
+[2022-12-27 17:50:05,262] INFO django.server (161) "GET /mainapp/ HTTP/1.1" 200 22134
+[2022-12-27 17:50:05,322] INFO django.server (161) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2022-12-27 17:50:05,372] WARNING django.request (224) Not Found: /favicon.ico
+[2022-12-27 17:50:05,373] WARNING django.server (161) "GET /favicon.ico HTTP/1.1" 404 12795
+[2022-12-27 17:50:10,800] INFO django.server (161) "GET /mainapp/news/ HTTP/1.1" 200 22386
